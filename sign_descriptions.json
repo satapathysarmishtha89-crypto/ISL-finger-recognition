@@ -1,0 +1,247 @@
+{
+  "1": {
+    "sign": "1",
+    "description": "Index finger pointed straight upwards. Thumb and remaining three fingers are tightly curled into the palm. Single hand gesture.",
+    "key_features": "Single extended vertical index finger; all other fingers folded.",
+    "common_confusion": "May be confused with Sign 'D' if fingers touch thumb, or Sign 'I' if pinky is mistaken for index.",
+    "verified": true
+  },
+  "2": {
+    "sign": "2",
+    "description": "Index and middle fingers extended straight upwards in a V shape. Ring and pinky fingers are folded down and held by the thumb. Single hand gesture.",
+    "key_features": "Two extended upward fingers; ring and little finger closed.",
+    "common_confusion": "May be confused with Sign 'V' (same shape) or Sign '5' if fingers are uncurled.",
+    "verified": true
+  },
+  "3": {
+    "sign": "3",
+    "description": "Index, middle, and ring fingers extended upwards and slightly separated. Little finger is folded into the palm and held down by the thumb. Single hand gesture.",
+    "key_features": "Three upward fingers (index, middle, ring); pinky held down.",
+    "common_confusion": "May be confused with Sign 'W' (spread fingers) or Sign '6' depending on regional variation.",
+    "verified": true
+  },
+  "4": {
+    "sign": "4",
+    "description": "All four fingers (index, middle, ring, pinky) held straight up vertically side-by-side. Thumb is tucked across the palm. Single hand gesture.",
+    "key_features": "Four vertical fingers extended; thumb tucked.",
+    "common_confusion": "May be confused with Sign 'B' (flat hand) if fingers are pressed together tightly.",
+    "verified": true
+  },
+  "5": {
+    "sign": "5",
+    "description": "Open hand with all five fingers and thumb fully extended, upright, and separated. Palm faces forward. Single hand gesture.",
+    "key_features": "All 5 digits fully open and spread.",
+    "common_confusion": "May be confused with Sign '2' or Sign '4' if thumb/fingers are partially curled.",
+    "verified": true
+  },
+  "6": {
+    "sign": "6",
+    "description": "Thumb and little finger (pinky) extended outward, while index, middle, and ring fingers are curled into the palm. Single hand gesture.",
+    "key_features": "Thumb and pinky extended out (telephone-like gesture); middle three fingers closed.",
+    "common_confusion": "May be confused with Sign 'Y' or Sign 'Z' in low-light camera angles.",
+    "verified": true
+  },
+  "7": {
+    "sign": "7",
+    "description": "Index finger and thumb extended to form a right-angle or open caliper shape pointing upwards/forward. Other three fingers are closed into the palm. Single hand gesture.",
+    "key_features": "Open L-shape or pinch gesture between index and thumb.",
+    "common_confusion": "May be confused with Sign 'L' or Sign 'G'.",
+    "verified": true
+  },
+  "8": {
+    "sign": "8",
+    "description": "Middle finger tip touches the tip of the thumb to form an open circle, while index, ring, and pinky fingers remain extended upwards. Single hand gesture.",
+    "key_features": "Middle finger and thumb touching; other 3 fingers extended.",
+    "common_confusion": "May be confused with Sign '9' or Sign 'F' where index touches thumb instead of middle.",
+    "verified": true
+  },
+  "9": {
+    "sign": "9",
+    "description": "Index finger tip touches the tip of the thumb forming a circular ring (OK sign). Middle, ring, and pinky fingers are held extended straight up. Single hand gesture.",
+    "key_features": "Index and thumb touching to form a loop; remaining three fingers upright.",
+    "common_confusion": "May be confused with Sign 'F' or Sign 'D' if finger loop angles are unclear.",
+    "verified": true
+  },
+  "A": {
+    "sign": "A",
+    "description": "Tightly closed fist with all four fingers folded against the palm. Thumb remains upright and rests against the side of the index finger. Single hand gesture.",
+    "key_features": "Compact fist; thumb upright along the side of the index finger.",
+    "common_confusion": "May be confused with Sign 'S' where thumb crosses over the front of the fingers.",
+    "verified": true
+  },
+  "B": {
+    "sign": "B",
+    "description": "Flat open hand with all four fingers held straight up, pressed tightly together side-by-side. Thumb is folded flat across the lower palm. Single hand gesture.",
+    "key_features": "Four straight vertical fingers touching; thumb tucked over palm.",
+    "common_confusion": "May be confused with Sign '4' (spread fingers) or Sign 'Q'/'O' if fingers curve.",
+    "verified": true
+  },
+  "C": {
+    "sign": "C",
+    "description": "All fingers curved together and thumb curved below to form a clear semicircular 'C' shape facing sideways. Single hand gesture.",
+    "key_features": "Curved arch of fingers and thumb mimicking the letter 'C'.",
+    "common_confusion": "May be confused with Sign 'O' if fingertips touch thumb.",
+    "verified": true
+  },
+  "D": {
+    "sign": "D",
+    "description": "Index finger points straight up. Middle, ring, and pinky fingers curve down and touch the tip of the thumb, forming a closed circular loop below the index finger. Single hand gesture.",
+    "key_features": "Vertical index finger with a lower circular loop formed by other fingers and thumb.",
+    "common_confusion": "May be confused with Sign '9' or Sign 'C' if index finger angle is low.",
+    "verified": true
+  },
+  "E": {
+    "sign": "E",
+    "description": "All four fingers are bent at the knuckles and curled down towards the palm. Thumb is tightly tucked underneath the fingertips. Single hand gesture.",
+    "key_features": "Curled fingernails resting just above or touching the thumb.",
+    "common_confusion": "May be confused with Sign 'S' or Sign 'O'.",
+    "verified": true
+  },
+  "F": {
+    "sign": "F",
+    "description": "Index finger and thumb touch tips to form a circular ring. The remaining three fingers (middle, ring, pinky) are held straight up, slightly spread. Single hand gesture.",
+    "key_features": "Circular loop between index and thumb; middle, ring, pinky standing straight up.",
+    "common_confusion": "May be confused with Sign '9' (which shares this exact hand configuration in ISL/ASL).",
+    "verified": true
+  },
+  "G": {
+    "sign": "G",
+    "description": "Index finger and thumb extended horizontally parallel to each other pointing sideways like a small caliper, separated by about an inch. Other fingers folded. Single hand gesture.",
+    "key_features": "Parallel horizontal index finger and thumb pointing sideways.",
+    "common_confusion": "May be confused with Sign 'H' (which has two extended horizontal fingers).",
+    "verified": true
+  },
+  "H": {
+    "sign": "H",
+    "description": "Index and middle fingers are held straight and together, pointing horizontally sideways. Thumb is folded underneath them. Single hand gesture.",
+    "key_features": "Two horizontal parallel fingers touching side-by-side.",
+    "common_confusion": "May be confused with Sign 'G' (one horizontal finger) or Sign 'U' (vertical).",
+    "verified": true
+  },
+  "I": {
+    "sign": "I",
+    "description": "Pinky finger pointed straight up vertically. All other fingers (index, middle, ring) are folded into a closed fist with the thumb resting across them. Single hand gesture.",
+    "key_features": "Only little finger (pinky) upright; other fingers closed in a fist.",
+    "common_confusion": "May be confused with Sign 'J' (which adds a curved motion) or Sign '1'.",
+    "verified": true
+  },
+  "J": {
+    "sign": "J",
+    "description": "Hand begins in the 'I' position with pinky extended, then the pinky traces the curve of the letter 'J' downwards in the air. Single hand gesture.",
+    "key_features": "Extended pinky with a curved hook trajectory.",
+    "common_confusion": "May be confused with static Sign 'I'.",
+    "verified": true
+  },
+  "K": {
+    "sign": "K",
+    "description": "Index finger points straight up, middle finger angles forward, and thumb rests against the knuckle of the middle finger. Palm faces forward. Single hand gesture.",
+    "key_features": "Index straight up, middle finger forward, thumb touching middle knuckle.",
+    "common_confusion": "May be confused with Sign 'V' or Sign 'P' (which points downwards).",
+    "verified": true
+  },
+  "L": {
+    "sign": "L",
+    "description": "Index finger extended straight up vertically and thumb extended horizontally sideways at a 90-degree angle, forming the capital letter 'L'. Other three fingers closed into palm. Single hand gesture.",
+    "key_features": "Distinct 90-degree L-shape formed by index finger and thumb.",
+    "common_confusion": "Distinct gesture; rarely confused when viewed from front.",
+    "verified": true
+  },
+  "M": {
+    "sign": "M",
+    "description": "Three fingers (index, middle, ring) folded over the thumb, so the tip of the thumb protrudes between the ring and pinky fingers. Single hand gesture.",
+    "key_features": "Three fingers draped over the tucked thumb.",
+    "common_confusion": "May be confused with Sign 'N' (two fingers over thumb) or Sign 'A'.",
+    "verified": true
+  },
+  "N": {
+    "sign": "N",
+    "description": "Two fingers (index and middle) folded over the thumb, with the thumb tip peeking out between the middle and ring fingers. Single hand gesture.",
+    "key_features": "Two fingers draped over the tucked thumb.",
+    "common_confusion": "May be confused with Sign 'M' (three fingers) or Sign 'T' (one finger).",
+    "verified": true
+  },
+  "O": {
+    "sign": "O",
+    "description": "All four fingers curved down and touching the curved thumb tip, forming a circular 'O' shape. Single hand gesture.",
+    "key_features": "Enclosed circular ring shape formed by all fingertips touching the thumb.",
+    "common_confusion": "May be confused with Sign 'C' (open semicircle) or Sign 'E' (tight curl).",
+    "verified": true
+  },
+  "P": {
+    "sign": "P",
+    "description": "Hand is oriented downwards; index finger points straight down, middle finger points forward at an angle, and thumb touches the middle knuckle. Single hand gesture.",
+    "key_features": "Downward-pointing variation of the 'K' sign.",
+    "common_confusion": "May be confused with Sign 'K' (which points upwards) or Sign 'Q'.",
+    "verified": true
+  },
+  "Q": {
+    "sign": "Q",
+    "description": "Index finger and thumb extended downwards parallel to each other, like an inverted 'G' sign pointing towards the floor. Single hand gesture.",
+    "key_features": "Index and thumb pointing downwards like calipers.",
+    "common_confusion": "May be confused with Sign 'G' (horizontal) or Sign 'P'.",
+    "verified": true
+  },
+  "R": {
+    "sign": "R",
+    "description": "Index and middle fingers extended straight up and crossed over each other (middle finger crossing over index). Ring and pinky held down by thumb. Single hand gesture.",
+    "key_features": "Crossed index and middle fingers (good luck gesture).",
+    "common_confusion": "May be confused with Sign 'U' or Sign 'V' if crossing is not visible.",
+    "verified": true
+  },
+  "S": {
+    "sign": "S",
+    "description": "Tight fist with all four fingers curled tightly, and the thumb folded firmly across the front of the fingers. Single hand gesture.",
+    "key_features": "Fist with thumb lying horizontally across the front knuckles.",
+    "common_confusion": "May be confused with Sign 'A' (thumb alongside) or Sign 'E' (thumb under).",
+    "verified": true
+  },
+  "T": {
+    "sign": "T",
+    "description": "Fist with thumb tucked underneath the index finger, with thumb tip protruding between index and middle fingers. Single hand gesture.",
+    "key_features": "Thumb peeking between index and middle fingers in a fist.",
+    "common_confusion": "May be confused with Sign 'N' or Sign 'S'.",
+    "verified": true
+  },
+  "U": {
+    "sign": "U",
+    "description": "Index and middle fingers held straight up vertically, touching tightly together side-by-side with no gap. Ring and pinky folded and held by thumb. Single hand gesture.",
+    "key_features": "Two vertical fingers pressed together side-by-side.",
+    "common_confusion": "May be confused with Sign 'V' (separated fingers) or Sign 'H' (horizontal).",
+    "verified": true
+  },
+  "V": {
+    "sign": "V",
+    "description": "Index and middle fingers held straight up vertically and spread apart forming a clear 'V' shape (peace sign). Ring and pinky folded and held by thumb. Single hand gesture.",
+    "key_features": "Two vertical fingers spread apart in a distinct V.",
+    "common_confusion": "May be confused with Sign 'U' (fingers touching) or Sign '2'.",
+    "verified": true
+  },
+  "W": {
+    "sign": "W",
+    "description": "Index, middle, and ring fingers held straight up and spread apart to form a 'W' shape. Pinky is folded and held down by the thumb. Single hand gesture.",
+    "key_features": "Three upright spread fingers forming a 'W'.",
+    "common_confusion": "May be confused with Sign '3' or Sign '6'.",
+    "verified": true
+  },
+  "X": {
+    "sign": "X",
+    "description": "Fist with the index finger extended and bent into a hook or crook shape (like pulling a trigger). Single hand gesture.",
+    "key_features": "Hooked index finger; all other fingers closed into a fist.",
+    "common_confusion": "May be confused with Sign 'D' or Sign 'E'.",
+    "verified": true
+  },
+  "Y": {
+    "sign": "Y",
+    "description": "Thumb and little finger (pinky) extended far apart outwards in a 'hang loose' / shaka shape. The middle three fingers (index, middle, ring) are folded tightly against the palm. Single hand gesture.",
+    "key_features": "Thumb and pinky extended out to the sides; middle three fingers tucked.",
+    "common_confusion": "May be confused with Sign '6' or Sign 'J'.",
+    "verified": true
+  },
+  "Z": {
+    "sign": "Z",
+    "description": "Index finger extended straight out pointing forward and tracing the zigzag shape of the letter 'Z' in the air. Other fingers folded into a fist. Single hand gesture.",
+    "key_features": "Index finger tracing a zigzag 'Z' pattern in the air.",
+    "common_confusion": "May be confused with Sign '1' or Sign 'D' in static views.",
+    "verified": true
+  }
+}

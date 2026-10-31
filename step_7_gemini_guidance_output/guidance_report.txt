@@ -1,0 +1,69 @@
+===========================================================================
+ISL FINGERSPELLING: STEP 5 - GEMINI SIGN GUIDANCE REPORT
+===========================================================================
+
+Specification Implementation Details:
+- Verified Descriptions:  sign_descriptions.json (35 classes)
+- Fallback Strategy:      Rule-based verified template when API is absent
+- Trigger Criteria:       Applied on ambiguous predictions (< 85% conf) or requests
+
+===========================================================================
+BENCHMARK GUIDANCE SCENARIOS & OUTPUTS
+===========================================================================
+
+[Scenario]: High Confidence Clean Sign (Sign 'A')
+- Detected Sign:  'A' (99.8%)
+- Competing Sign: 'S'
+- Guidance Engine:verified_rule_fallback
+- Tutor Guidance:
+    Sign 'A' recognized with high confidence (99.8%).
+    - Correct Form: Tightly closed fist with all four fingers folded against the palm. Thumb remains upright and rests against the side of the index finger. Single hand gesture.
+    - Pro Tip: Ensure your compact fist; thumb upright along the side of the index finger..
+---------------------------------------------------------------------------
+
+[Scenario]: Low Confidence Ambiguity: Sign 'D' vs '9'
+- Detected Sign:  'D' (62.4%)
+- Competing Sign: '9'
+- Guidance Engine:verified_rule_fallback
+- Tutor Guidance:
+    The model detected Sign 'D' (62.4%), but it is close to Sign '9'.
+    - To form 'D': Index finger points straight up. Middle, ring, and pinky fingers curve down and touch the tip of the thumb, forming a closed circular loop below the index finger. Single hand gesture.
+    - Difference from '9': In 'D', Vertical index finger with a lower circular loop formed by other fingers and thumb.. In '9', Index and thumb touching to form a loop; remaining three fingers upright..
+    - Action Tip: Check your finger separation and thumb position to remove ambiguity.
+---------------------------------------------------------------------------
+
+[Scenario]: Low Confidence Ambiguity: Sign 'U' vs 'V'
+- Detected Sign:  'U' (58.1%)
+- Competing Sign: 'V'
+- Guidance Engine:verified_rule_fallback
+- Tutor Guidance:
+    The model detected Sign 'U' (58.1%), but it is close to Sign 'V'.
+    - To form 'U': Index and middle fingers held straight up vertically, touching tightly together side-by-side with no gap. Ring and pinky folded and held by thumb. Single hand gesture.
+    - Difference from 'V': In 'U', Two vertical fingers pressed together side-by-side.. In 'V', Two vertical fingers spread apart in a distinct V..
+    - Action Tip: Check your finger separation and thumb position to remove ambiguity.
+---------------------------------------------------------------------------
+
+[Scenario]: Confused Palm Sign: Sign 'B' vs 'Q'
+- Detected Sign:  'B' (64.2%)
+- Competing Sign: 'Q'
+- Guidance Engine:verified_rule_fallback
+- Tutor Guidance:
+    The model detected Sign 'B' (64.2%), but it is close to Sign 'Q'.
+    - To form 'B': Flat open hand with all four fingers held straight up, pressed tightly together side-by-side. Thumb is folded flat across the lower palm. Single hand gesture.
+    - Difference from 'Q': In 'B', Four straight vertical fingers touching; thumb tucked over palm.. In 'Q', Index and thumb pointing downwards like calipers..
+    - Action Tip: Check your finger separation and thumb position to remove ambiguity.
+---------------------------------------------------------------------------
+
+[Scenario]: Clean Digit Sign (Sign '1')
+- Detected Sign:  '1' (99.5%)
+- Competing Sign: 'D'
+- Guidance Engine:verified_rule_fallback
+- Tutor Guidance:
+    Sign '1' recognized with high confidence (99.5%).
+    - Correct Form: Index finger pointed straight upwards. Thumb and remaining three fingers are tightly curled into the palm. Single hand gesture.
+    - Pro Tip: Ensure your single extended vertical index finger; all other fingers folded..
+---------------------------------------------------------------------------
+
+===========================================================================
+STEP 5: GEMINI SIGN GUIDANCE COMPLETED SUCCESSFULLY!
+===========================================================================

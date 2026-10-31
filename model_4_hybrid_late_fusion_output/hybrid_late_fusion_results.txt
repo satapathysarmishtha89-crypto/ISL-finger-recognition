@@ -1,0 +1,44 @@
+===========================================================================
+ISL FINGERSPELLING: MODEL EVALUATION REPORT - HYBRID LATE FUSION
+===========================================================================
+
+Fusion Configuration:
+- CNN Branch Backbone:       MobileNetV2 (ImageNet Pretrained)
+- Landmark Branch:           Landmark DNN (42-D Normalized Coordinates)
+- Optimal Weight w* (Val):   0.69 (CNN) / 0.31 (Landmarks)
+- Execution Time:            2.49 seconds
+
+===========================================================================
+MULTI-SPLIT FUSION BENCHMARK SUMMARY
+===========================================================================
+Strategy               Split Protocol             Accuracy   Macro-F1   Kappa      MCC       
+----------------------------------------------------------------------------------------
+weighted_average       standard                   99.96      0.9996     0.9996     0.9996    
+weighted_average       signer_independent         95.62      0.9610     0.9548     0.9559    
+weighted_average       background_independent     95.62      0.9613     0.9548     0.9561    
+----------------------------------------------------------------------------------------
+stacking               standard                   99.96      0.9996     0.9996     0.9996    
+stacking               signer_independent         94.54      0.9505     0.9437     0.9450    
+stacking               background_independent     95.06      0.9552     0.9491     0.9505    
+----------------------------------------------------------------------------------------
+confidence_aware       standard                   99.92      0.9992     0.9992     0.9992    
+confidence_aware       signer_independent         93.72      0.9423     0.9352     0.9366    
+confidence_aware       background_independent     93.93      0.9434     0.9374     0.9389    
+----------------------------------------------------------------------------------------
+
+===========================================================================
+GENERALIZATION GAPS BY FUSION STRATEGY
+===========================================================================
+Strategy: weighted_average
+  - Signer-Independent Drop:     +4.34%
+  - Background-Independent Drop: +4.34%
+Strategy: stacking
+  - Signer-Independent Drop:     +5.42%
+  - Background-Independent Drop: +4.90%
+Strategy: confidence_aware
+  - Signer-Independent Drop:     +6.20%
+  - Background-Independent Drop: +5.99%
+
+===========================================================================
+STEP 4.4: HYBRID LATE FUSION COMPLETED SUCCESSFULLY!
+===========================================================================

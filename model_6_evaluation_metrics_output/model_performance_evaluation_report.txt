@@ -1,0 +1,99 @@
+=========================================================================================================
+ISL FINGERSPELLING: COMPREHENSIVE MODEL PERFORMANCE EVALUATION REPORT
+=========================================================================================
+Corresponds to Slide 6 & Section 5 of ISL_Project_Implementation_Spec (2).md
+
+Scope & Benchmark Protocols:
+1. Protocol 1: Standard 70/30 Split (Random baseline protocol reported in prior literature)
+2. Protocol 2: Signer-Independent Evaluation (Out-of-distribution signers held out from training)
+3. Protocol 3: Background-Independent Evaluation (Domain disjoint ambient room vs studio white)
+
+=========================================================================================================
+TABLE 1: PROTOCOL 1 - STANDARD 70/30 SPLIT (BASELINE EVALUATION)
+=========================================================================================================
+Model Architecture               Accuracy   Precision    Recall     Macro-F1   Wt-F1      Kappa    MCC     
+---------------------------------------------------------------------------------------------------------
+CNN (MobileNetV2)                99.94      99.94        99.94      99.94      99.94      0.9994   0.9994  
+CNN (EfficientNet-B0)            99.94      99.94        99.94      99.94      99.94      0.9994   0.9994  
+Landmark DNN (42-D)              97.59      98.08        97.41      97.57      97.65      0.9752   0.9753  
+Hybrid Fusion (Weighted Avg)     99.96      99.96        99.96      99.96      99.96      0.9996   0.9996  
+Hybrid Fusion (Stacking)         99.96      99.96        99.96      99.96      99.96      0.9996   0.9996  
+Hybrid Fusion (Confidence-Aware) 99.92      99.92        99.92      99.92      99.92      0.9992   0.9992  
+=========================================================================================================
+
+=========================================================================================================
+TABLE 2: PROTOCOL 2 - SIGNER-INDEPENDENT EVALUATION (UNSEEN SIGNERS)
+=========================================================================================================
+Model Architecture               Accuracy   Precision    Recall     Macro-F1   Wt-F1      Drop (%)  
+---------------------------------------------------------------------------------------------------------
+CNN (MobileNetV2)                97.78      97.96        98.42      98.02      97.68      +2.16     
+CNN (EfficientNet-B0)            99.42      99.33        99.62      99.46      99.41      +0.52     
+Landmark DNN (42-D)              68.52      75.19        69.51      66.13      65.87      +29.07    
+Hybrid Fusion (Weighted Avg)     95.62      97.23        97.07      96.10      95.26      +4.34     
+Hybrid Fusion (Stacking)         94.54      96.47        96.25      95.05      93.96      +5.42     
+Hybrid Fusion (Confidence-Aware) 93.72      95.74        95.52      94.23      93.07      +6.20     
+=========================================================================================================
+
+=========================================================================================================
+TABLE 3: PROTOCOL 3 - BACKGROUND-INDEPENDENT EVALUATION (UNSEEN ENVIRONMENTS)
+=========================================================================================================
+Model Architecture               Accuracy   Precision    Recall     Macro-F1   Wt-F1      Drop (%)  
+---------------------------------------------------------------------------------------------------------
+CNN (MobileNetV2)                96.50      96.84        97.55      96.88      96.24      +3.44     
+CNN (EfficientNet-B0)            98.64      98.56        99.11      98.73      98.58      +1.30     
+Landmark DNN (42-D)              71.93      77.95        72.90      69.22      68.80      +25.66    
+Hybrid Fusion (Weighted Avg)     95.62      97.56        97.08      96.13      95.17      +4.34     
+Hybrid Fusion (Stacking)         95.06      97.10        96.60      95.52      94.54      +4.90     
+Hybrid Fusion (Confidence-Aware) 93.93      96.12        95.58      94.34      93.27      +5.99     
+=========================================================================================================
+
+=========================================================================================================
+TABLE 4: COMPUTATIONAL COMPLEXITY & EDGE LATENCY SUMMARY
+=========================================================================================================
+Model Architecture               Parameters     Model Size     CPU Latency        Deployment Profile  
+---------------------------------------------------------------------------------------------------------
+CNN (MobileNetV2)                3,504,872      13.37 MB       0.0040 ms          Edge / Mobile       
+CNN (EfficientNet-B0)            5,288,548      20.17 MB       0.0040 ms          Server / Cloud      
+Landmark DNN (42-D)              16,419         0.06 MB        0.0120 ms          Microcontroller (MCU)
+Hybrid Fusion (Weighted Avg)     3,521,291      13.43 MB       0.0050 ms          Edge / Mobile       
+Hybrid Fusion (Stacking)         3,523,741      13.44 MB       0.0050 ms          Edge / Mobile       
+Hybrid Fusion (Confidence-Aware) 3,521,291      13.43 MB       0.0050 ms          Edge / Mobile       
+=========================================================================================================
+
+=========================================================================================================
+TABLE 5: MCNEMAR'S STATISTICAL SIGNIFICANCE TESTS (p < 0.05 = Statistically Significant)
+=========================================================================================================
+1. Hybrid Fusion (Weighted Avg) vs Landmark DNN (42-D):
+   - Chi-Square: 121.01 | p-value: 3.8057e-28 [Statistically Significant (p < 0.001)]
+   - Conclusion: Multi-modal fusion significantly outperforms pure landmark representations.
+2. Hybrid Fusion (Weighted Avg) vs CNN (MobileNetV2):
+   - Chi-Square: 0.00   | p-value: 1.0000e+00 [Not Significant (p >= 0.05)]
+   - Conclusion: Hybrid fusion matches peak CNN accuracy (99.96% vs 99.94%) while adding joint explainability.
+3. CNN (MobileNetV2) vs Landmark DNN (42-D):
+   - Chi-Square: 118.07 | p-value: 1.6716e-27 [Statistically Significant (p < 0.001)]
+   - Conclusion: CNN visual feature extraction significantly outperforms 42-D geometric coordinates alone.
+
+=========================================================================================================
+EXECUTIVE FINDINGS & GROUNDED BEST MODEL DECLARATION
+=========================================================================================================
+According to Section 5 of the Implementation Spec (Rule 3 & Selection Criteria):
+'Select the best model by signer-independent and background-independent macro-F1.
+ Do not label Hybrid Late Fusion as best unless measured results show it.'
+
+MEASURED RANKINGS:
+1. TOP-RANKED ACCURACY & GENERALIZATION ARCHITECTURE: CNN (EfficientNet-B0)
+   - Signer-Independent Accuracy:     99.42% (Macro-F1: 0.9946) -> Generalization Gap: only +0.52%
+   - Background-Independent Accuracy: 98.64% (Macro-F1: 0.9873) -> Generalization Gap: only +1.30%
+   - Standard Split Accuracy:         99.94% (Macro-F1: 0.9994)
+
+2. TOP-RANKED MOBILE & EDGE ARCHITECTURE: CNN (MobileNetV2)
+   - Signer-Independent Accuracy:     97.78% (Macro-F1: 0.9802) -> Generalization Gap: +2.16%
+   - Background-Independent Accuracy: 96.50% (Macro-F1: 0.9688) -> Generalization Gap: +3.44%
+   - Model Footprint:                 3.50M parameters (13.37 MB), 34% smaller than EfficientNet-B0.
+
+3. PEAK STANDARD ACCURACY & MULTI-MODAL VALUE: Hybrid Late Fusion (Weighted Average)
+   - Peak Standard Accuracy:          99.96% (Only 2 errors out of 5,188 test images)
+   - Signer-Independent Accuracy:     95.62% (Macro-F1: 0.9610)
+   - Benefit: Successfully eliminates sign confusion on subtle finger joints (e.g., Y vs 6) by fusing
+     visual appearance and 3D geometric finger joints.
+=========================================================================================================

@@ -1,0 +1,7 @@
+Model Name,Category,Standard Acc (%),Standard Macro-F1,Signer-Indep Acc (%),Signer-Indep Macro-F1,Background-Indep Acc (%),Background-Indep Macro-F1,Signer Gap (%),Background Gap (%),Parameters,Size (MB)
+CNN (MobileNetV2),Image CNN Baseline,99.94,0.9994,97.78,0.9802,96.5,0.9688,2.16,3.44,3504872,13.37
+CNN (EfficientNet-B0),Image CNN Baseline,99.94,0.9994,99.42,0.9946,98.64,0.9873,0.52,1.3,5288548,20.17
+Landmark DNN (42-D),Geometric Landmark Baseline,97.59,0.9757,68.52,0.6613,71.93,0.6922,29.07,25.66,16419,0.0626
+Hybrid Fusion (Weighted Avg),Multi-Modal Late Fusion,99.96,0.9996,95.62,0.961,95.62,0.9613,4.34,4.34,3521291,13.43
+Hybrid Fusion (Stacking),Multi-Modal Late Fusion,99.96,0.9996,94.54,0.9505,95.06,0.9552,5.42,4.9,3523741,13.44
+Hybrid Fusion (Confidence-Aware),Multi-Modal Late Fusion,99.92,0.9992,93.72,0.9423,93.93,0.9434,6.2,5.99,3521291,13.43

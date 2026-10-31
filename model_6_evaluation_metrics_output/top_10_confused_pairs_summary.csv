@@ -1,0 +1,79 @@
+Model,Protocol,True Sign,Predicted Sign,Error Count
+CNN (MobileNetV2),standard,Y,6,1
+CNN (MobileNetV2),standard,6,Z,1
+CNN (MobileNetV2),standard,2,5,1
+CNN (MobileNetV2),signer_independent,D,9,36
+CNN (MobileNetV2),signer_independent,D,C,24
+CNN (MobileNetV2),signer_independent,B,Q,19
+CNN (MobileNetV2),signer_independent,B,O,9
+CNN (MobileNetV2),signer_independent,B,D,9
+CNN (MobileNetV2),background_independent,D,9,50
+CNN (MobileNetV2),background_independent,D,C,37
+CNN (MobileNetV2),background_independent,B,Q,30
+CNN (MobileNetV2),background_independent,B,D,30
+CNN (MobileNetV2),background_independent,B,J,15
+CNN (EfficientNet-B0),standard,I,K,1
+CNN (EfficientNet-B0),standard,6,Z,1
+CNN (EfficientNet-B0),standard,2,5,1
+CNN (EfficientNet-B0),signer_independent,B,O,13
+CNN (EfficientNet-B0),signer_independent,B,F,5
+CNN (EfficientNet-B0),signer_independent,B,6,5
+CNN (EfficientNet-B0),signer_independent,B,Q,3
+CNN (EfficientNet-B0),signer_independent,B,N,2
+CNN (EfficientNet-B0),background_independent,B,O,27
+CNN (EfficientNet-B0),background_independent,B,E,13
+CNN (EfficientNet-B0),background_independent,B,Q,11
+CNN (EfficientNet-B0),background_independent,B,F,10
+CNN (EfficientNet-B0),background_independent,D,C,5
+Landmark DNN (42-D),standard,U,G,30
+Landmark DNN (42-D),standard,N,R,21
+Landmark DNN (42-D),standard,J,G,14
+Landmark DNN (42-D),standard,W,G,14
+Landmark DNN (42-D),standard,R,H,6
+Landmark DNN (42-D),signer_independent,B,Q,183
+Landmark DNN (42-D),signer_independent,M,H,120
+Landmark DNN (42-D),signer_independent,H,M,119
+Landmark DNN (42-D),signer_independent,S,Q,114
+Landmark DNN (42-D),signer_independent,I,J,110
+Landmark DNN (42-D),background_independent,B,Q,198
+Landmark DNN (42-D),background_independent,H,M,121
+Landmark DNN (42-D),background_independent,M,H,120
+Landmark DNN (42-D),background_independent,C,D,85
+Landmark DNN (42-D),background_independent,K,Y,83
+Hybrid Fusion (Weighted Avg),standard,6,Z,1
+Hybrid Fusion (Weighted Avg),standard,2,5,1
+Hybrid Fusion (Weighted Avg),signer_independent,B,Q,164
+Hybrid Fusion (Weighted Avg),signer_independent,D,9,44
+Hybrid Fusion (Weighted Avg),signer_independent,B,O,14
+Hybrid Fusion (Weighted Avg),signer_independent,N,R,6
+Hybrid Fusion (Weighted Avg),signer_independent,D,E,3
+Hybrid Fusion (Weighted Avg),background_independent,B,Q,191
+Hybrid Fusion (Weighted Avg),background_independent,E,C,15
+Hybrid Fusion (Weighted Avg),background_independent,N,R,7
+Hybrid Fusion (Weighted Avg),background_independent,D,C,7
+Hybrid Fusion (Weighted Avg),background_independent,D,9,5
+Hybrid Fusion (Stacking),standard,6,Z,1
+Hybrid Fusion (Stacking),standard,2,5,1
+Hybrid Fusion (Stacking),signer_independent,B,Q,183
+Hybrid Fusion (Stacking),signer_independent,D,9,24
+Hybrid Fusion (Stacking),signer_independent,Y,X,21
+Hybrid Fusion (Stacking),signer_independent,E,C,19
+Hybrid Fusion (Stacking),signer_independent,D,P,18
+Hybrid Fusion (Stacking),background_independent,B,Q,200
+Hybrid Fusion (Stacking),background_independent,E,C,33
+Hybrid Fusion (Stacking),background_independent,Y,X,15
+Hybrid Fusion (Stacking),background_independent,G,A,7
+Hybrid Fusion (Stacking),background_independent,N,R,4
+Hybrid Fusion (Confidence-Aware),standard,S,T,2
+Hybrid Fusion (Confidence-Aware),standard,6,Z,1
+Hybrid Fusion (Confidence-Aware),standard,2,5,1
+Hybrid Fusion (Confidence-Aware),signer_independent,B,Q,183
+Hybrid Fusion (Confidence-Aware),signer_independent,E,C,29
+Hybrid Fusion (Confidence-Aware),signer_independent,Y,X,23
+Hybrid Fusion (Confidence-Aware),signer_independent,D,9,23
+Hybrid Fusion (Confidence-Aware),signer_independent,D,P,19
+Hybrid Fusion (Confidence-Aware),background_independent,B,Q,199
+Hybrid Fusion (Confidence-Aware),background_independent,E,C,37
+Hybrid Fusion (Confidence-Aware),background_independent,N,R,31
+Hybrid Fusion (Confidence-Aware),background_independent,Y,X,23
+Hybrid Fusion (Confidence-Aware),background_independent,G,A,11

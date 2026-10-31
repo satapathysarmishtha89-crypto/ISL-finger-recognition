@@ -1,0 +1,19 @@
+Model Name,Category,Protocol,Protocol Key,Accuracy (%),Macro Precision (%),Weighted Precision (%),Macro Recall (%),Weighted Recall (%),Macro F1 (%),Weighted F1 (%),Cohen's Kappa,MCC,Generalization Gap (%),Parameters,Size (MB),Latency (ms/image)
+CNN (MobileNetV2),Image CNN Baseline,Standard 70/30 Split,standard,99.94,99.94,9994.0,99.94,9994.0,99.94,99.94,0.9994,0.9994,0.0,3504872,13.37,0.004
+CNN (MobileNetV2),Image CNN Baseline,Signer-Independent Split,signer_independent,97.78,97.96,9796.0,98.42,9842.0,98.02,97.68,0.9771,0.9773,2.16,3504872,13.37,0.004
+CNN (MobileNetV2),Image CNN Baseline,Background-Independent Split,background_independent,96.5,96.84,9684.0,97.55,9755.0,96.88,96.24,0.9639,0.9642,3.44,3504872,13.37,0.004
+CNN (EfficientNet-B0),Image CNN Baseline,Standard 70/30 Split,standard,99.94,99.94,9994.0,99.94,9994.0,99.94,99.94,0.9994,0.9994,0.0,5288548,20.17,0.004
+CNN (EfficientNet-B0),Image CNN Baseline,Signer-Independent Split,signer_independent,99.42,99.33,9933.0,99.62,9962.0,99.46,99.41,0.994,0.9941,0.52,5288548,20.17,0.003
+CNN (EfficientNet-B0),Image CNN Baseline,Background-Independent Split,background_independent,98.64,98.56,9856.0,99.11,9911.0,98.73,98.58,0.986,0.9861,1.3,5288548,20.17,0.003
+Landmark DNN (42-D),Geometric Landmark Baseline,Standard 70/30 Split,standard,97.59,98.08,9808.0,97.41,9741.0,97.57,97.65,0.9752,0.9753,0.0,16419,0.0626,0.012
+Landmark DNN (42-D),Geometric Landmark Baseline,Signer-Independent Split,signer_independent,68.52,75.19,7519.0,69.51,6951.0,66.13,65.87,0.6752,0.6784,29.07,16419,0.0626,0.013
+Landmark DNN (42-D),Geometric Landmark Baseline,Background-Independent Split,background_independent,71.93,77.95,7795.0,72.9,7290.0,69.22,68.8,0.7103,0.7133,25.66,16419,0.0626,0.012
+Hybrid Fusion (Weighted Avg),Multi-Modal Late Fusion,Standard 70/30 Split,standard,99.96,99.96,9996.0,99.96,9996.0,99.96,99.96,0.9996,0.9996,0.0,3521291,13.43,0.005
+Hybrid Fusion (Weighted Avg),Multi-Modal Late Fusion,Signer-Independent Split,signer_independent,95.62,97.23,9723.0,97.07,9707.0,96.1,95.26,0.9548,0.9559,4.34,3521291,13.43,0.005
+Hybrid Fusion (Weighted Avg),Multi-Modal Late Fusion,Background-Independent Split,background_independent,95.62,97.56,9756.0,97.08,9708.0,96.13,95.17,0.9548,0.9561,4.34,3521291,13.43,0.005
+Hybrid Fusion (Stacking),Multi-Modal Late Fusion,Standard 70/30 Split,standard,99.96,99.96,9996.0,99.96,9996.0,99.96,99.96,0.9996,0.9996,0.0,3523741,13.44,0.005
+Hybrid Fusion (Stacking),Multi-Modal Late Fusion,Signer-Independent Split,signer_independent,94.54,96.47,9647.0,96.25,9625.0,95.05,93.96,0.9437,0.945,5.42,3523741,13.44,0.005
+Hybrid Fusion (Stacking),Multi-Modal Late Fusion,Background-Independent Split,background_independent,95.06,97.1,9710.0,96.6,9660.0,95.52,94.54,0.9491,0.9505,4.9,3523741,13.44,0.005
+Hybrid Fusion (Confidence-Aware),Multi-Modal Late Fusion,Standard 70/30 Split,standard,99.92,99.92,9992.0,99.92,9992.0,99.92,99.92,0.9992,0.9992,0.0,3521291,13.43,0.005
+Hybrid Fusion (Confidence-Aware),Multi-Modal Late Fusion,Signer-Independent Split,signer_independent,93.72,95.74,9574.0,95.52,9552.0,94.23,93.07,0.9352,0.9366,6.2,3521291,13.43,0.005
+Hybrid Fusion (Confidence-Aware),Multi-Modal Late Fusion,Background-Independent Split,background_independent,93.93,96.12,9612.0,95.58,9558.0,94.34,93.27,0.9374,0.9389,5.99,3521291,13.43,0.005

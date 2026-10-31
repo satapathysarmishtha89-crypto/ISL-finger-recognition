@@ -1,0 +1,47 @@
+[
+  {
+    "source": "verified_rule_fallback",
+    "predicted_class": "A",
+    "confidence": 0.998,
+    "second_class": "S",
+    "guidance_text": "Sign 'A' recognized with high confidence (99.8%).\n- Correct Form: Tightly closed fist with all four fingers folded against the palm. Thumb remains upright and rests against the side of the index finger. Single hand gesture.\n- Pro Tip: Ensure your compact fist; thumb upright along the side of the index finger..",
+    "scenario_id": "scenario_1_high_confidence",
+    "scenario_title": "High Confidence Clean Sign (Sign 'A')"
+  },
+  {
+    "source": "verified_rule_fallback",
+    "predicted_class": "D",
+    "confidence": 0.624,
+    "second_class": "9",
+    "guidance_text": "The model detected Sign 'D' (62.4%), but it is close to Sign '9'.\n- To form 'D': Index finger points straight up. Middle, ring, and pinky fingers curve down and touch the tip of the thumb, forming a closed circular loop below the index finger. Single hand gesture.\n- Difference from '9': In 'D', Vertical index finger with a lower circular loop formed by other fingers and thumb.. In '9', Index and thumb touching to form a loop; remaining three fingers upright..\n- Action Tip: Check your finger separation and thumb position to remove ambiguity.",
+    "scenario_id": "scenario_2_ambiguous_loop",
+    "scenario_title": "Low Confidence Ambiguity: Sign 'D' vs '9'"
+  },
+  {
+    "source": "verified_rule_fallback",
+    "predicted_class": "U",
+    "confidence": 0.581,
+    "second_class": "V",
+    "guidance_text": "The model detected Sign 'U' (58.1%), but it is close to Sign 'V'.\n- To form 'U': Index and middle fingers held straight up vertically, touching tightly together side-by-side with no gap. Ring and pinky folded and held by thumb. Single hand gesture.\n- Difference from 'V': In 'U', Two vertical fingers pressed together side-by-side.. In 'V', Two vertical fingers spread apart in a distinct V..\n- Action Tip: Check your finger separation and thumb position to remove ambiguity.",
+    "scenario_id": "scenario_3_finger_spread",
+    "scenario_title": "Low Confidence Ambiguity: Sign 'U' vs 'V'"
+  },
+  {
+    "source": "verified_rule_fallback",
+    "predicted_class": "B",
+    "confidence": 0.642,
+    "second_class": "Q",
+    "guidance_text": "The model detected Sign 'B' (64.2%), but it is close to Sign 'Q'.\n- To form 'B': Flat open hand with all four fingers held straight up, pressed tightly together side-by-side. Thumb is folded flat across the lower palm. Single hand gesture.\n- Difference from 'Q': In 'B', Four straight vertical fingers touching; thumb tucked over palm.. In 'Q', Index and thumb pointing downwards like calipers..\n- Action Tip: Check your finger separation and thumb position to remove ambiguity.",
+    "scenario_id": "scenario_4_flat_hand",
+    "scenario_title": "Confused Palm Sign: Sign 'B' vs 'Q'"
+  },
+  {
+    "source": "verified_rule_fallback",
+    "predicted_class": "1",
+    "confidence": 0.995,
+    "second_class": "D",
+    "guidance_text": "Sign '1' recognized with high confidence (99.5%).\n- Correct Form: Index finger pointed straight upwards. Thumb and remaining three fingers are tightly curled into the palm. Single hand gesture.\n- Pro Tip: Ensure your single extended vertical index finger; all other fingers folded..",
+    "scenario_id": "scenario_5_vertical_number",
+    "scenario_title": "Clean Digit Sign (Sign '1')"
+  }
+]

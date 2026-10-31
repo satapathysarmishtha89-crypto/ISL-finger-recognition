@@ -1,0 +1,32 @@
+{
+  "step": "4. Explainability",
+  "gradcam": {
+    "target_layer": "MobileNetV2 features[-1] (Conv2dNormActivation)",
+    "correct_samples_count": 5,
+    "incorrect_samples_count": 5,
+    "correct_classes": [
+      "A",
+      "B",
+      "C",
+      "L",
+      "V"
+    ],
+    "incorrect_classes": [
+      "True: 2 -> Pred: 5",
+      "True: 6 -> Pred: Z",
+      "True: Y -> Pred: 6",
+      "True: D -> Pred: D",
+      "True: B -> Pred: B"
+    ]
+  },
+  "tsne": {
+    "modalities_evaluated": [
+      "CNN 1280-D",
+      "Landmark 42-D",
+      "Hybrid Multi-Modal"
+    ],
+    "perplexity": 30,
+    "classes_represented": 35
+  },
+  "total_runtime_seconds": 16.69
+}

@@ -1,0 +1,64 @@
+====================================================================================================
+ISL FINGERSPELLING: STEP 8 (FINAL MODEL) & STEP 9 (MODEL OUTCOME) REPORT
+====================================================================================
+Corresponds to Slide 8 ('Final Model') and Slide 9 ('Model Outcome')
+Based on ISL_Project_Implementation_Spec (2).md Section 8
+
+------------------------------------------------------------------------------------
+1. STEP 8: FINAL MODEL SPECIFICATION
+------------------------------------------------------------------------------------
+• Architecture: Hybrid CNN + Landmark Late Fusion
+• CNN Visual Feature Branch: MobileNetV2 (1280-D global average pooled embeddings)
+• Geometric Landmark Branch: MediaPipe 42-D Normalized Joint Coordinates (128->64->35 DNN)
+• Optimal Fusion Weight: w = 0.69 (CNN weight: 69%, Landmark weight: 31%)
+• Dynamic Fallback Strategy: Confidence-Aware fallback to pure CNN when no landmarks detected
+• Output Layer: 35-Class Softmax Probability Vector (Sum of all 35 class probabilities = 1.0)
+• Model Footprint: 3,521,291 parameters (~13.43 MB on disk)
+• Inference Latency: ~0.0050 ms per image on standard CPU (real-time 60+ FPS capable)
+
+------------------------------------------------------------------------------------
+2. STEP 9: MODEL OUTCOME SPECIFICATION
+------------------------------------------------------------------------------------
+• Core Objective: Generate the predicted sign class for any input hand sign image.
+• Decision Rule: Predicted Class y_hat = argmax_c P(c | input)
+• Confidence Score: c = max_c P(c | input) * 100%
+• Ambiguity Quantification: Margin = P(top_1) - P(top_2)
+  - When Margin > 30%: Model is unambiguous and definitive.
+  - When Margin <= 30%: Model detects visual similarity between top-2 signs and triggers
+    Gemini Sign Guidance to explain the precise physical difference to the user.
+
+------------------------------------------------------------------------------------
+3. EMPIRICAL BENCHMARK OUTCOME VERIFICATION (Test Set: 5,188 Images)
+------------------------------------------------------------------------------------
+• Total Evaluated Test Samples:  5,188
+• Correct Outcomes:             5,186 (99.96%)
+• Misclassified Outcomes:       2 (0.04%)
+• Mean Confidence (Correct):    94.73%
+• High Confidence Rate (>95%):  71.97%
+
+------------------------------------------------------------------------------------
+4. SAMPLE PREDICTION OUTCOMES TABLE
+------------------------------------------------------------------------------------
+Sample ID    True Sign    Predicted Sign   Confidence (%)   Margin (%)     Status        
+------------------------------------------------------------------------------------
+0            1            1                96.99            96.75          CORRECT       
+1            1            1                96.79            96.59          CORRECT       
+2            1            1                96.92            96.71          CORRECT       
+3            1            1                97.33            97.18          CORRECT       
+4            1            1                97.80            97.68          CORRECT       
+5            1            1                97.94            97.84          CORRECT       
+6            1            1                98.01            97.89          CORRECT       
+7            1            1                97.02            96.86          CORRECT       
+8            1            1                97.99            97.81          CORRECT       
+9            1            1                95.74            95.46          CORRECT       
+10           1            1                96.75            96.54          CORRECT       
+11           1            1                97.65            97.51          CORRECT       
+12           1            1                95.66            95.44          CORRECT       
+13           1            1                97.44            97.29          CORRECT       
+14           1            1                97.07            96.86          CORRECT       
+15           1            1                97.17            97.02          CORRECT       
+16           1            1                97.36            97.21          CORRECT       
+17           1            1                95.53            95.24          CORRECT       
+18           1            1                97.80            97.66          CORRECT       
+19           1            1                97.10            96.94          CORRECT       
+====================================================================================================

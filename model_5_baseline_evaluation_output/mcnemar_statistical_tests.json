@@ -1,0 +1,176 @@
+{
+  "standard_split": {
+    "Hybrid Fusion (Weighted Avg) vs Landmark DNN": {
+      "contingency_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          123,
+          5063
+        ]
+      ],
+      "statistic": 121.0081,
+      "p_value": 3.805691040748689e-28,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 123,
+      "model_b_exclusive_correct": 0
+    },
+    "Hybrid Fusion (Weighted Avg) vs CNN (MobileNetV2)": {
+      "contingency_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          5185
+        ]
+      ],
+      "statistic": 0.0,
+      "p_value": 1.0,
+      "significant_at_0_05": false,
+      "model_a_exclusive_correct": 1,
+      "model_b_exclusive_correct": 0
+    },
+    "Hybrid Fusion (Weighted Avg) vs CNN (EfficientNet-B0)": {
+      "contingency_matrix": [
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          5185
+        ]
+      ],
+      "statistic": 0.0,
+      "p_value": 1.0,
+      "significant_at_0_05": false,
+      "model_a_exclusive_correct": 1,
+      "model_b_exclusive_correct": 0
+    },
+    "CNN (MobileNetV2) vs Landmark DNN": {
+      "contingency_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          123,
+          5062
+        ]
+      ],
+      "statistic": 118.0726,
+      "p_value": 1.6715794540909937e-27,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 123,
+      "model_b_exclusive_correct": 1
+    },
+    "CNN (MobileNetV2) vs CNN (EfficientNet-B0)": {
+      "contingency_matrix": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          5184
+        ]
+      ],
+      "statistic": 0.5,
+      "p_value": 1.0,
+      "significant_at_0_05": false,
+      "model_a_exclusive_correct": 1,
+      "model_b_exclusive_correct": 1
+    }
+  },
+  "signer_independent_split": {
+    "Hybrid Fusion (Weighted Avg) vs Landmark DNN": {
+      "contingency_matrix": [
+        [
+          233,
+          2
+        ],
+        [
+          1457,
+          3676
+        ]
+      ],
+      "statistic": 1449.0171,
+      "p_value": 0.0,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 1457,
+      "model_b_exclusive_correct": 2
+    },
+    "Hybrid Fusion (Weighted Avg) vs CNN (MobileNetV2)": {
+      "contingency_matrix": [
+        [
+          83,
+          152
+        ],
+        [
+          36,
+          5097
+        ]
+      ],
+      "statistic": 70.3457,
+      "p_value": 4.977009484632524e-17,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 36,
+      "model_b_exclusive_correct": 152
+    },
+    "Hybrid Fusion (Weighted Avg) vs CNN (EfficientNet-B0)": {
+      "contingency_matrix": [
+        [
+          25,
+          210
+        ],
+        [
+          6,
+          5127
+        ]
+      ],
+      "statistic": 190.7824,
+      "p_value": 2.145607151100828e-43,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 6,
+      "model_b_exclusive_correct": 210
+    },
+    "CNN (MobileNetV2) vs Landmark DNN": {
+      "contingency_matrix": [
+        [
+          83,
+          36
+        ],
+        [
+          1607,
+          3642
+        ]
+      ],
+      "statistic": 1500.2435,
+      "p_value": 0.0,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 1607,
+      "model_b_exclusive_correct": 36
+    },
+    "CNN (MobileNetV2) vs CNN (EfficientNet-B0)": {
+      "contingency_matrix": [
+        [
+          13,
+          106
+        ],
+        [
+          18,
+          5231
+        ]
+      ],
+      "statistic": 61.0403,
+      "p_value": 5.5917712060354016e-15,
+      "significant_at_0_05": true,
+      "model_a_exclusive_correct": 18,
+      "model_b_exclusive_correct": 106
+    }
+  }
+}

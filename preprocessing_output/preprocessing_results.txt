@@ -1,0 +1,62 @@
+======================================================================
+ISL FINGERSPELLING RECOGNITION - DATA PREPROCESSING REPORT
+======================================================================
+
+Techniques Applied:
+1. Image Preprocessing:
+   - MediaPipe Hand Detection & Bounding Box extraction (15% margin)
+   - Symmetrical zero-padding to square aspect ratio
+   - Bilinear interpolation resizing to 224x224
+   - Fallback to resized original image on detection failure
+2. Landmark Feature Extraction:
+   - 21 landmarks x (x, y) = 42-D representation
+   - Translation normalization relative to wrist (landmark 0)
+   - Scale normalization relative to wrist-to-middle-MCP distance
+
+Dataset Metrics:
+- Total Images Processed:    17,292
+- Hands Detected:            17,002 (98.32%)
+- Fallback Resized:          290
+- Output Images Folder:      preprocessing_output\preprocessed_images
+- Output Landmark Matrix:    preprocessing_output\landmarks_42d.npz -> Shape: (17292, 42)
+- Total Processing Time:     646.93 seconds (26.7 images/sec)
+
+Per-Class Detection Summary:
+Class    Images     Detected   Rate (%)   Time (s)  
+--------------------------------------------------
+1        460        459        99.8       12.1      
+2        471        471        100.0      14.3      
+3        452        452        100.0      13.1      
+4        440        440        100.0      12.4      
+5        471        471        100.0      14.5      
+6        499        499        100.0      14.2      
+7        466        466        100.0      14.4      
+8        498        498        100.0      16.3      
+9        474        474        100.0      14.5      
+A        462        462        100.0      18.3      
+B        578        578        100.0      22.4      
+C        532        532        100.0      15.6      
+D        524        524        100.0      18.3      
+E        566        566        100.0      21.0      
+F        476        475        99.8       16.2      
+G        494        395        80.0       13.8      
+H        444        444        100.0      12.3      
+I        506        496        98.0       14.0      
+J        464        427        92.0       11.7      
+K        503        503        100.0      16.6      
+L        570        570        100.0      18.9      
+M        525        525        100.0      21.1      
+N        523        523        100.0      22.2      
+O        402        380        94.5       14.5      
+P        691        691        100.0      33.1      
+Q        462        462        100.0      25.1      
+R        554        554        100.0      34.8      
+S        465        465        100.0      30.0      
+T        490        490        100.0      27.9      
+U        463        381        82.3       20.5      
+V        475        475        100.0      20.0      
+W        328        290        88.4       10.8      
+X        547        547        100.0      26.4      
+Y        512        512        100.0      19.9      
+Z        505        505        100.0      15.6      
+======================================================================

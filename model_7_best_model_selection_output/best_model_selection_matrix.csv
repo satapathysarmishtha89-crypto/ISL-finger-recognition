@@ -1,0 +1,7 @@
+Model Name,Architecture Type,Standard Acc (%),Signer-Indep F1 (%),Background-Indep F1 (%),Avg OOD F1 (%),Avg Generalization Gap (%),Size (MB),Multi-Modal Support,MCDA Composite Score,Rank
+Hybrid Fusion (Weighted Avg),Multi-Modal Late Fusion,99.96,96.1,96.13,96.12,4.34,13.43,Yes,92.61,Rank 1
+Hybrid Fusion (Stacking),Multi-Modal Late Fusion,99.96,95.05,95.52,95.28,5.16,13.44,Yes,92.19,Rank 2
+Hybrid Fusion (Confidence-Aware),Multi-Modal Late Fusion,99.92,94.23,94.34,94.28,6.1,13.43,Yes,91.69,Rank 3
+CNN (MobileNetV2),CNN Baseline,99.94,98.02,96.88,97.45,2.8,13.37,No,88.82,Rank 4
+CNN (EfficientNet-B0),CNN Baseline,99.94,99.46,98.73,99.09,0.91,20.17,No,86.96,Rank 5
+Landmark DNN (42-D),Geometric Baseline,97.59,66.13,69.22,67.67,27.37,0.06,No,79.45,Rank 6

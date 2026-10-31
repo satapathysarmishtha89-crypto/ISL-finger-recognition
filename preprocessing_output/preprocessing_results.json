@@ -1,0 +1,274 @@
+{
+  "step": "2. Data Preprocessing",
+  "description": "Image cropping/resizing and MediaPipe 42-D landmark feature extraction",
+  "total_images_processed": 17292,
+  "total_hands_detected": 17002,
+  "overall_detection_rate_pct": 98.32,
+  "target_resolution": [
+    224,
+    224
+  ],
+  "num_classes": 35,
+  "classes": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "features_shape": [
+    17292,
+    42
+  ],
+  "output_files": {
+    "preprocessed_images_directory": "preprocessing_output\\preprocessed_images",
+    "landmarks_npz_file": "preprocessing_output\\landmarks_42d.npz",
+    "no_detection_csv_file": "preprocessing_output\\no_detection.csv"
+  },
+  "performance": {
+    "total_execution_time_seconds": 646.93,
+    "throughput_images_per_second": 26.73
+  },
+  "per_class_summary": {
+    "1": {
+      "total_images": 460,
+      "hands_detected": 459,
+      "detection_rate_pct": 99.78,
+      "processing_time_s": 12.1
+    },
+    "2": {
+      "total_images": 471,
+      "hands_detected": 471,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 14.27
+    },
+    "3": {
+      "total_images": 452,
+      "hands_detected": 452,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 13.14
+    },
+    "4": {
+      "total_images": 440,
+      "hands_detected": 440,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 12.37
+    },
+    "5": {
+      "total_images": 471,
+      "hands_detected": 471,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 14.53
+    },
+    "6": {
+      "total_images": 499,
+      "hands_detected": 499,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 14.19
+    },
+    "7": {
+      "total_images": 466,
+      "hands_detected": 466,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 14.36
+    },
+    "8": {
+      "total_images": 498,
+      "hands_detected": 498,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 16.33
+    },
+    "9": {
+      "total_images": 474,
+      "hands_detected": 474,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 14.54
+    },
+    "A": {
+      "total_images": 462,
+      "hands_detected": 462,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 18.28
+    },
+    "B": {
+      "total_images": 578,
+      "hands_detected": 578,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 22.37
+    },
+    "C": {
+      "total_images": 532,
+      "hands_detected": 532,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 15.58
+    },
+    "D": {
+      "total_images": 524,
+      "hands_detected": 524,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 18.34
+    },
+    "E": {
+      "total_images": 566,
+      "hands_detected": 566,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 21.04
+    },
+    "F": {
+      "total_images": 476,
+      "hands_detected": 475,
+      "detection_rate_pct": 99.79,
+      "processing_time_s": 16.21
+    },
+    "G": {
+      "total_images": 494,
+      "hands_detected": 395,
+      "detection_rate_pct": 79.96,
+      "processing_time_s": 13.8
+    },
+    "H": {
+      "total_images": 444,
+      "hands_detected": 444,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 12.29
+    },
+    "I": {
+      "total_images": 506,
+      "hands_detected": 496,
+      "detection_rate_pct": 98.02,
+      "processing_time_s": 13.97
+    },
+    "J": {
+      "total_images": 464,
+      "hands_detected": 427,
+      "detection_rate_pct": 92.03,
+      "processing_time_s": 11.73
+    },
+    "K": {
+      "total_images": 503,
+      "hands_detected": 503,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 16.59
+    },
+    "L": {
+      "total_images": 570,
+      "hands_detected": 570,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 18.88
+    },
+    "M": {
+      "total_images": 525,
+      "hands_detected": 525,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 21.14
+    },
+    "N": {
+      "total_images": 523,
+      "hands_detected": 523,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 22.17
+    },
+    "O": {
+      "total_images": 402,
+      "hands_detected": 380,
+      "detection_rate_pct": 94.53,
+      "processing_time_s": 14.47
+    },
+    "P": {
+      "total_images": 691,
+      "hands_detected": 691,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 33.06
+    },
+    "Q": {
+      "total_images": 462,
+      "hands_detected": 462,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 25.14
+    },
+    "R": {
+      "total_images": 554,
+      "hands_detected": 554,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 34.75
+    },
+    "S": {
+      "total_images": 465,
+      "hands_detected": 465,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 30.03
+    },
+    "T": {
+      "total_images": 490,
+      "hands_detected": 490,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 27.86
+    },
+    "U": {
+      "total_images": 463,
+      "hands_detected": 381,
+      "detection_rate_pct": 82.29,
+      "processing_time_s": 20.53
+    },
+    "V": {
+      "total_images": 475,
+      "hands_detected": 475,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 19.96
+    },
+    "W": {
+      "total_images": 328,
+      "hands_detected": 290,
+      "detection_rate_pct": 88.41,
+      "processing_time_s": 10.8
+    },
+    "X": {
+      "total_images": 547,
+      "hands_detected": 547,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 26.39
+    },
+    "Y": {
+      "total_images": 512,
+      "hands_detected": 512,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 19.92
+    },
+    "Z": {
+      "total_images": 505,
+      "hands_detected": 505,
+      "detection_rate_pct": 100.0,
+      "processing_time_s": 15.56
+    }
+  }
+}

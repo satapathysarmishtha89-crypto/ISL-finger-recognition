@@ -1,0 +1,107 @@
+{
+  "step": "Step 7: Best Model Selection",
+  "slide": "Slide 7: Best Model Selection",
+  "selected_best_model": {
+    "name": "Hybrid Late Fusion (Weighted Average)",
+    "cnn_backbone": "MobileNetV2",
+    "landmark_branch": "42-D Landmark DNN",
+    "optimal_weight_w": 0.69,
+    "standard_accuracy_pct": 99.96,
+    "standard_macro_f1": 0.9996,
+    "model_size_mb": 13.43,
+    "planned_candidate_confirmed": true,
+    "selection_rationale": "Peak accuracy of 99.96% with multi-modal joint disambiguation and Gemini tutoring support."
+  },
+  "generalization_invariance_leader": {
+    "name": "CNN (EfficientNet-B0)",
+    "signer_independent_acc_pct": 99.42,
+    "background_independent_acc_pct": 98.64,
+    "avg_generalization_gap_pct": 0.91
+  },
+  "mobile_edge_leader": {
+    "name": "CNN (MobileNetV2)",
+    "model_size_mb": 13.37,
+    "parameters": 3504872,
+    "latency_ms": 0.004
+  },
+  "all_candidates_ranked": [
+    {
+      "Model Name": "Hybrid Fusion (Weighted Avg)",
+      "Architecture Type": "Multi-Modal Late Fusion",
+      "Standard Acc (%)": 99.96,
+      "Signer-Indep F1 (%)": 96.1,
+      "Background-Indep F1 (%)": 96.13,
+      "Avg OOD F1 (%)": 96.12,
+      "Avg Generalization Gap (%)": 4.34,
+      "Size (MB)": 13.43,
+      "Multi-Modal Support": "Yes",
+      "MCDA Composite Score": 92.61,
+      "Rank": "Rank 1"
+    },
+    {
+      "Model Name": "Hybrid Fusion (Stacking)",
+      "Architecture Type": "Multi-Modal Late Fusion",
+      "Standard Acc (%)": 99.96,
+      "Signer-Indep F1 (%)": 95.05,
+      "Background-Indep F1 (%)": 95.52,
+      "Avg OOD F1 (%)": 95.28,
+      "Avg Generalization Gap (%)": 5.16,
+      "Size (MB)": 13.44,
+      "Multi-Modal Support": "Yes",
+      "MCDA Composite Score": 92.19,
+      "Rank": "Rank 2"
+    },
+    {
+      "Model Name": "Hybrid Fusion (Confidence-Aware)",
+      "Architecture Type": "Multi-Modal Late Fusion",
+      "Standard Acc (%)": 99.92,
+      "Signer-Indep F1 (%)": 94.23,
+      "Background-Indep F1 (%)": 94.34,
+      "Avg OOD F1 (%)": 94.28,
+      "Avg Generalization Gap (%)": 6.1,
+      "Size (MB)": 13.43,
+      "Multi-Modal Support": "Yes",
+      "MCDA Composite Score": 91.69,
+      "Rank": "Rank 3"
+    },
+    {
+      "Model Name": "CNN (MobileNetV2)",
+      "Architecture Type": "CNN Baseline",
+      "Standard Acc (%)": 99.94,
+      "Signer-Indep F1 (%)": 98.02,
+      "Background-Indep F1 (%)": 96.88,
+      "Avg OOD F1 (%)": 97.45,
+      "Avg Generalization Gap (%)": 2.8,
+      "Size (MB)": 13.37,
+      "Multi-Modal Support": "No",
+      "MCDA Composite Score": 88.82,
+      "Rank": "Rank 4"
+    },
+    {
+      "Model Name": "CNN (EfficientNet-B0)",
+      "Architecture Type": "CNN Baseline",
+      "Standard Acc (%)": 99.94,
+      "Signer-Indep F1 (%)": 99.46,
+      "Background-Indep F1 (%)": 98.73,
+      "Avg OOD F1 (%)": 99.09,
+      "Avg Generalization Gap (%)": 0.91,
+      "Size (MB)": 20.17,
+      "Multi-Modal Support": "No",
+      "MCDA Composite Score": 86.96,
+      "Rank": "Rank 5"
+    },
+    {
+      "Model Name": "Landmark DNN (42-D)",
+      "Architecture Type": "Geometric Baseline",
+      "Standard Acc (%)": 97.59,
+      "Signer-Indep F1 (%)": 66.13,
+      "Background-Indep F1 (%)": 69.22,
+      "Avg OOD F1 (%)": 67.67,
+      "Avg Generalization Gap (%)": 27.37,
+      "Size (MB)": 0.06,
+      "Multi-Modal Support": "No",
+      "MCDA Composite Score": 79.45,
+      "Rank": "Rank 6"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "step_8_final_model": {
+    "name": "Hybrid CNN + Landmark Late Fusion",
+    "parameters": 63815,
+    "fusion_weight_w": 0.69,
+    "output": "35-class Softmax Probability Distribution",
+    "checkpoint_file": "final_hybrid_model_bundle.pth"
+  },
+  "step_9_model_outcome": {
+    "total_evaluated_samples": 5188,
+    "accuracy_pct": 99.96,
+    "mean_confidence_correct_pct": 94.73,
+    "mean_confidence_error_pct": 46.8,
+    "high_confidence_ratio_gt_95": 71.97
+  }
+}

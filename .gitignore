@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments & IDEs
+.env
+.venv/
+venv/
+ENV/
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Intermediate large feature archives (>40MB - reproducible via scripts)
+*_features_1280d.npz
+model_1_mobilenetv2_output/mobilenetv2_features_1280d.npz
+model_2_efficientnet_b0_output/efficientnet_b0_features_1280d.npz
+
+# Intermediate duplicate image crops (160MB / 17,292 duplicate images - reproducible via preprocessing.py)
+preprocessing_output/preprocessed_images/
+
+# Temporary / Log files
+*.log
+*.tmp

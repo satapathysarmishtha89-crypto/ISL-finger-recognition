@@ -1,0 +1,779 @@
+{
+  "step": "3. Dataset Splitting",
+  "description": "Standard 70/30, Signer-Independent, and Background-Independent Splits",
+  "dataset_metadata": {
+    "total_images": 17292,
+    "num_classes": 35,
+    "classes": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L",
+      "M",
+      "N",
+      "O",
+      "P",
+      "Q",
+      "R",
+      "S",
+      "T",
+      "U",
+      "V",
+      "W",
+      "X",
+      "Y",
+      "Z"
+    ],
+    "landmarks_archive": "preprocessing_output/landmarks_42d.npz"
+  },
+  "target_specifications": {
+    "train_ratio": 0.7,
+    "test_ratio": 0.30000000000000004,
+    "val_ratio_of_train": 0.15,
+    "random_seed": 42
+  },
+  "execution_summary": {
+    "execution_time_seconds": 1.09,
+    "output_directory": "C:\\Users\\Hp\\OneDrive\\Desktop\\DORA_MAM\\dataset_splitting_output",
+    "protocols_generated": [
+      "standard_split",
+      "signer_independent_split",
+      "background_independent_split"
+    ]
+  },
+  "verification_suite": {
+    "standard_split": {
+      "passed": true,
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0,
+      "all_35_classes_in_train": true,
+      "all_35_classes_in_val": true,
+      "all_35_classes_in_test": true,
+      "valid_landmark_indices": true,
+      "session_overlap": null,
+      "domain_overlap": null
+    },
+    "signer_independent_split": {
+      "passed": true,
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0,
+      "all_35_classes_in_train": true,
+      "all_35_classes_in_val": true,
+      "all_35_classes_in_test": true,
+      "valid_landmark_indices": true,
+      "session_overlap": 0,
+      "domain_overlap": null
+    },
+    "background_independent_split": {
+      "passed": true,
+      "train_val_overlap": 0,
+      "train_test_overlap": 0,
+      "val_test_overlap": 0,
+      "all_35_classes_in_train": true,
+      "all_35_classes_in_val": true,
+      "all_35_classes_in_test": true,
+      "valid_landmark_indices": true,
+      "session_overlap": null,
+      "domain_overlap": 0
+    }
+  },
+  "protocol_statistics": {
+    "standard_split": {
+      "total_samples": 17292,
+      "counts": {
+        "train": 10288,
+        "val": 1816,
+        "test": 5188
+      },
+      "percentages": {
+        "train_pct": 59.5,
+        "val_pct": 10.5,
+        "test_pct": 30.0,
+        "train_plus_val_pct": 70.0
+      },
+      "per_class_distribution": {
+        "1": {
+          "train": 274,
+          "val": 48,
+          "test": 138,
+          "total": 460
+        },
+        "2": {
+          "train": 280,
+          "val": 50,
+          "test": 141,
+          "total": 471
+        },
+        "3": {
+          "train": 269,
+          "val": 47,
+          "test": 136,
+          "total": 452
+        },
+        "4": {
+          "train": 262,
+          "val": 46,
+          "test": 132,
+          "total": 440
+        },
+        "5": {
+          "train": 280,
+          "val": 50,
+          "test": 141,
+          "total": 471
+        },
+        "6": {
+          "train": 297,
+          "val": 52,
+          "test": 150,
+          "total": 499
+        },
+        "7": {
+          "train": 277,
+          "val": 49,
+          "test": 140,
+          "total": 466
+        },
+        "8": {
+          "train": 297,
+          "val": 52,
+          "test": 149,
+          "total": 498
+        },
+        "9": {
+          "train": 282,
+          "val": 50,
+          "test": 142,
+          "total": 474
+        },
+        "A": {
+          "train": 275,
+          "val": 48,
+          "test": 139,
+          "total": 462
+        },
+        "B": {
+          "train": 344,
+          "val": 61,
+          "test": 173,
+          "total": 578
+        },
+        "C": {
+          "train": 316,
+          "val": 56,
+          "test": 160,
+          "total": 532
+        },
+        "D": {
+          "train": 312,
+          "val": 55,
+          "test": 157,
+          "total": 524
+        },
+        "E": {
+          "train": 337,
+          "val": 59,
+          "test": 170,
+          "total": 566
+        },
+        "F": {
+          "train": 283,
+          "val": 50,
+          "test": 143,
+          "total": 476
+        },
+        "G": {
+          "train": 294,
+          "val": 52,
+          "test": 148,
+          "total": 494
+        },
+        "H": {
+          "train": 264,
+          "val": 47,
+          "test": 133,
+          "total": 444
+        },
+        "I": {
+          "train": 301,
+          "val": 53,
+          "test": 152,
+          "total": 506
+        },
+        "J": {
+          "train": 276,
+          "val": 49,
+          "test": 139,
+          "total": 464
+        },
+        "K": {
+          "train": 299,
+          "val": 53,
+          "test": 151,
+          "total": 503
+        },
+        "L": {
+          "train": 339,
+          "val": 60,
+          "test": 171,
+          "total": 570
+        },
+        "M": {
+          "train": 312,
+          "val": 55,
+          "test": 158,
+          "total": 525
+        },
+        "N": {
+          "train": 311,
+          "val": 55,
+          "test": 157,
+          "total": 523
+        },
+        "O": {
+          "train": 239,
+          "val": 42,
+          "test": 121,
+          "total": 402
+        },
+        "P": {
+          "train": 411,
+          "val": 73,
+          "test": 207,
+          "total": 691
+        },
+        "Q": {
+          "train": 275,
+          "val": 48,
+          "test": 139,
+          "total": 462
+        },
+        "R": {
+          "train": 330,
+          "val": 58,
+          "test": 166,
+          "total": 554
+        },
+        "S": {
+          "train": 277,
+          "val": 49,
+          "test": 139,
+          "total": 465
+        },
+        "T": {
+          "train": 292,
+          "val": 51,
+          "test": 147,
+          "total": 490
+        },
+        "U": {
+          "train": 275,
+          "val": 49,
+          "test": 139,
+          "total": 463
+        },
+        "V": {
+          "train": 283,
+          "val": 50,
+          "test": 142,
+          "total": 475
+        },
+        "W": {
+          "train": 195,
+          "val": 35,
+          "test": 98,
+          "total": 328
+        },
+        "X": {
+          "train": 326,
+          "val": 57,
+          "test": 164,
+          "total": 547
+        },
+        "Y": {
+          "train": 304,
+          "val": 54,
+          "test": 154,
+          "total": 512
+        },
+        "Z": {
+          "train": 300,
+          "val": 53,
+          "test": 152,
+          "total": 505
+        }
+      }
+    },
+    "signer_independent_split": {
+      "total_samples": 17292,
+      "counts": {
+        "train": 10137,
+        "val": 1787,
+        "test": 5368
+      },
+      "percentages": {
+        "train_pct": 58.62,
+        "val_pct": 10.33,
+        "test_pct": 31.04,
+        "train_plus_val_pct": 68.95
+      },
+      "per_class_distribution": {
+        "1": {
+          "train": 300,
+          "val": 53,
+          "test": 107,
+          "total": 460
+        },
+        "2": {
+          "train": 263,
+          "val": 46,
+          "test": 162,
+          "total": 471
+        },
+        "3": {
+          "train": 281,
+          "val": 50,
+          "test": 121,
+          "total": 452
+        },
+        "4": {
+          "train": 303,
+          "val": 54,
+          "test": 83,
+          "total": 440
+        },
+        "5": {
+          "train": 275,
+          "val": 49,
+          "test": 147,
+          "total": 471
+        },
+        "6": {
+          "train": 280,
+          "val": 49,
+          "test": 170,
+          "total": 499
+        },
+        "7": {
+          "train": 306,
+          "val": 54,
+          "test": 106,
+          "total": 466
+        },
+        "8": {
+          "train": 289,
+          "val": 51,
+          "test": 158,
+          "total": 498
+        },
+        "9": {
+          "train": 280,
+          "val": 50,
+          "test": 144,
+          "total": 474
+        },
+        "A": {
+          "train": 280,
+          "val": 49,
+          "test": 133,
+          "total": 462
+        },
+        "B": {
+          "train": 286,
+          "val": 50,
+          "test": 242,
+          "total": 578
+        },
+        "C": {
+          "train": 306,
+          "val": 54,
+          "test": 172,
+          "total": 532
+        },
+        "D": {
+          "train": 272,
+          "val": 48,
+          "test": 204,
+          "total": 524
+        },
+        "E": {
+          "train": 319,
+          "val": 56,
+          "test": 191,
+          "total": 566
+        },
+        "F": {
+          "train": 344,
+          "val": 61,
+          "test": 71,
+          "total": 476
+        },
+        "G": {
+          "train": 314,
+          "val": 55,
+          "test": 125,
+          "total": 494
+        },
+        "H": {
+          "train": 275,
+          "val": 48,
+          "test": 121,
+          "total": 444
+        },
+        "I": {
+          "train": 309,
+          "val": 54,
+          "test": 143,
+          "total": 506
+        },
+        "J": {
+          "train": 246,
+          "val": 44,
+          "test": 174,
+          "total": 464
+        },
+        "K": {
+          "train": 311,
+          "val": 55,
+          "test": 137,
+          "total": 503
+        },
+        "L": {
+          "train": 314,
+          "val": 55,
+          "test": 201,
+          "total": 570
+        },
+        "M": {
+          "train": 265,
+          "val": 47,
+          "test": 213,
+          "total": 525
+        },
+        "N": {
+          "train": 298,
+          "val": 52,
+          "test": 173,
+          "total": 523
+        },
+        "O": {
+          "train": 222,
+          "val": 39,
+          "test": 141,
+          "total": 402
+        },
+        "P": {
+          "train": 309,
+          "val": 54,
+          "test": 328,
+          "total": 691
+        },
+        "Q": {
+          "train": 290,
+          "val": 51,
+          "test": 121,
+          "total": 462
+        },
+        "R": {
+          "train": 286,
+          "val": 51,
+          "test": 217,
+          "total": 554
+        },
+        "S": {
+          "train": 280,
+          "val": 49,
+          "test": 136,
+          "total": 465
+        },
+        "T": {
+          "train": 342,
+          "val": 60,
+          "test": 88,
+          "total": 490
+        },
+        "U": {
+          "train": 261,
+          "val": 46,
+          "test": 156,
+          "total": 463
+        },
+        "V": {
+          "train": 288,
+          "val": 51,
+          "test": 136,
+          "total": 475
+        },
+        "W": {
+          "train": 179,
+          "val": 32,
+          "test": 117,
+          "total": 328
+        },
+        "X": {
+          "train": 377,
+          "val": 67,
+          "test": 103,
+          "total": 547
+        },
+        "Y": {
+          "train": 278,
+          "val": 49,
+          "test": 185,
+          "total": 512
+        },
+        "Z": {
+          "train": 309,
+          "val": 54,
+          "test": 142,
+          "total": 505
+        }
+      }
+    },
+    "background_independent_split": {
+      "total_samples": 17292,
+      "counts": {
+        "train": 10137,
+        "val": 1787,
+        "test": 5368
+      },
+      "percentages": {
+        "train_pct": 58.62,
+        "val_pct": 10.33,
+        "test_pct": 31.04,
+        "train_plus_val_pct": 68.95
+      },
+      "per_class_distribution": {
+        "1": {
+          "train": 300,
+          "val": 53,
+          "test": 107,
+          "total": 460
+        },
+        "2": {
+          "train": 263,
+          "val": 46,
+          "test": 162,
+          "total": 471
+        },
+        "3": {
+          "train": 281,
+          "val": 50,
+          "test": 121,
+          "total": 452
+        },
+        "4": {
+          "train": 303,
+          "val": 54,
+          "test": 83,
+          "total": 440
+        },
+        "5": {
+          "train": 275,
+          "val": 49,
+          "test": 147,
+          "total": 471
+        },
+        "6": {
+          "train": 280,
+          "val": 49,
+          "test": 170,
+          "total": 499
+        },
+        "7": {
+          "train": 306,
+          "val": 54,
+          "test": 106,
+          "total": 466
+        },
+        "8": {
+          "train": 289,
+          "val": 51,
+          "test": 158,
+          "total": 498
+        },
+        "9": {
+          "train": 280,
+          "val": 50,
+          "test": 144,
+          "total": 474
+        },
+        "A": {
+          "train": 280,
+          "val": 49,
+          "test": 133,
+          "total": 462
+        },
+        "B": {
+          "train": 286,
+          "val": 50,
+          "test": 242,
+          "total": 578
+        },
+        "C": {
+          "train": 306,
+          "val": 54,
+          "test": 172,
+          "total": 532
+        },
+        "D": {
+          "train": 272,
+          "val": 48,
+          "test": 204,
+          "total": 524
+        },
+        "E": {
+          "train": 319,
+          "val": 56,
+          "test": 191,
+          "total": 566
+        },
+        "F": {
+          "train": 344,
+          "val": 61,
+          "test": 71,
+          "total": 476
+        },
+        "G": {
+          "train": 314,
+          "val": 55,
+          "test": 125,
+          "total": 494
+        },
+        "H": {
+          "train": 275,
+          "val": 48,
+          "test": 121,
+          "total": 444
+        },
+        "I": {
+          "train": 309,
+          "val": 54,
+          "test": 143,
+          "total": 506
+        },
+        "J": {
+          "train": 246,
+          "val": 44,
+          "test": 174,
+          "total": 464
+        },
+        "K": {
+          "train": 311,
+          "val": 55,
+          "test": 137,
+          "total": 503
+        },
+        "L": {
+          "train": 314,
+          "val": 55,
+          "test": 201,
+          "total": 570
+        },
+        "M": {
+          "train": 265,
+          "val": 47,
+          "test": 213,
+          "total": 525
+        },
+        "N": {
+          "train": 298,
+          "val": 52,
+          "test": 173,
+          "total": 523
+        },
+        "O": {
+          "train": 222,
+          "val": 39,
+          "test": 141,
+          "total": 402
+        },
+        "P": {
+          "train": 309,
+          "val": 54,
+          "test": 328,
+          "total": 691
+        },
+        "Q": {
+          "train": 290,
+          "val": 51,
+          "test": 121,
+          "total": 462
+        },
+        "R": {
+          "train": 286,
+          "val": 51,
+          "test": 217,
+          "total": 554
+        },
+        "S": {
+          "train": 280,
+          "val": 49,
+          "test": 136,
+          "total": 465
+        },
+        "T": {
+          "train": 342,
+          "val": 60,
+          "test": 88,
+          "total": 490
+        },
+        "U": {
+          "train": 261,
+          "val": 46,
+          "test": 156,
+          "total": 463
+        },
+        "V": {
+          "train": 288,
+          "val": 51,
+          "test": 136,
+          "total": 475
+        },
+        "W": {
+          "train": 179,
+          "val": 32,
+          "test": 117,
+          "total": 328
+        },
+        "X": {
+          "train": 377,
+          "val": 67,
+          "test": 103,
+          "total": 547
+        },
+        "Y": {
+          "train": 278,
+          "val": 49,
+          "test": 185,
+          "total": 512
+        },
+        "Z": {
+          "train": 309,
+          "val": 54,
+          "test": 142,
+          "total": 505
+        }
+      }
+    }
+  }
+}

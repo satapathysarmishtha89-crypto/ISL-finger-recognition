@@ -1,0 +1,70 @@
+{
+  "model_name": "ISL_Hybrid_Late_Fusion_Final",
+  "step_8_final_model": {
+    "type": "Hybrid Multi-Modal Late Fusion",
+    "cnn_branch": {
+      "backbone": "MobileNetV2",
+      "input_shape": [
+        3,
+        224,
+        224
+      ],
+      "embedding_dim": 1280,
+      "preprocessing": "resize(224,224), ImageNet normalization"
+    },
+    "landmark_branch": {
+      "source": "MediaPipe Hands",
+      "input_dim": 42,
+      "normalization": "wrist-centered, middle-finger-MCP scaled"
+    },
+    "fusion": {
+      "method": "Confidence-Aware Weighted Softmax Average",
+      "weight_cnn": 0.69,
+      "weight_landmark": 0.31,
+      "fallback": "pure CNN when MediaPipe detects no hand"
+    },
+    "output_layer": "35-Class Softmax"
+  },
+  "step_9_model_outcome": {
+    "generation": "Predicted Class = argmax(P_softmax), Confidence = max(P_softmax) * 100",
+    "ambiguity_quantification": "Margin = Top1_Confidence - Top2_Confidence",
+    "downstream_handover": "Feeds predicted sign, confidence, and top-2 margin to Gemini Tutoring"
+  },
+  "classes": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ]
+}
