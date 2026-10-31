@@ -16,8 +16,11 @@ import time
 from pathlib import Path
 import numpy as np
 import pandas as pd
-from PIL import Image
-import cv2
+from PIL import Image, ImageDraw
+try:
+    import cv2
+except Exception:
+    cv2 = None
 import streamlit as st
 import torch
 import torch.nn as nn
@@ -252,18 +255,33 @@ def process_and_predict(image_rgb, detector, features_extractor, pool, m1_head, 
             crop_rgb = image_rgb[y1:y2, x1:x2]
 
         # Draw hand skeleton overlay
-        for conn in HAND_CONNECTIONS:
-            pt1 = (int(hand_landmarks[conn[0]].x * w), int(hand_landmarks[conn[0]].y * h))
-            pt2 = (int(hand_landmarks[conn[1]].x * w), int(hand_landmarks[conn[1]].y * h))
-            cv2.line(annotated_img, pt1, pt2, (0, 230, 118), 3)
+        if cv2 is not None:
+            for conn in HAND_CONNECTIONS:
+                pt1 = (int(hand_landmarks[conn[0]].x * w), int(hand_landmarks[conn[0]].y * h))
+                pt2 = (int(hand_landmarks[conn[1]].x * w), int(hand_landmarks[conn[1]].y * h))
+                cv2.line(annotated_img, pt1, pt2, (0, 230, 118), 3)
 
-        for lm in hand_landmarks:
-            cx, cy = int(lm.x * w), int(lm.y * h)
-            cv2.circle(annotated_img, (cx, cy), 5, (255, 61, 0), -1)
-            cv2.circle(annotated_img, (cx, cy), 7, (255, 255, 255), 1)
+            for lm in hand_landmarks:
+                cx, cy = int(lm.x * w), int(lm.y * h)
+                cv2.circle(annotated_img, (cx, cy), 5, (255, 61, 0), -1)
+                cv2.circle(annotated_img, (cx, cy), 7, (255, 255, 255), 1)
 
-        # Draw bounding box
-        cv2.rectangle(annotated_img, (x1, y1), (x2, y2), (41, 121, 255), 2)
+            # Draw bounding box
+            cv2.rectangle(annotated_img, (x1, y1), (x2, y2), (41, 121, 255), 2)
+        else:
+            pil_overlay = Image.fromarray(annotated_img)
+            draw = ImageDraw.Draw(pil_overlay)
+            for conn in HAND_CONNECTIONS:
+                pt1 = (int(hand_landmarks[conn[0]].x * w), int(hand_landmarks[conn[0]].y * h))
+                pt2 = (int(hand_landmarks[conn[1]].x * w), int(hand_landmarks[conn[1]].y * h))
+                draw.line([pt1, pt2], fill=(0, 230, 118), width=3)
+
+            for lm in hand_landmarks:
+                cx, cy = int(lm.x * w), int(lm.y * h)
+                draw.ellipse([(cx-5, cy-5), (cx+5, cy+5)], fill=(255, 61, 0), outline=(255, 255, 255))
+
+            draw.rectangle([(x1, y1), (x2, y2)], outline=(41, 121, 255), width=2)
+            annotated_img = np.array(pil_overlay)
 
     # Preprocess image for MobileNetV2
     tf = transforms.Compose([
