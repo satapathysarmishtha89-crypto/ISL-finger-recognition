@@ -25,6 +25,9 @@ model_2_efficientnet_b0_output/efficientnet_b0_features_1280d.npz
 # Intermediate duplicate image crops (160MB / 17,292 duplicate images - reproducible via preprocessing.py)
 preprocessing_output/preprocessed_images/
 
+# Raw large dataset (17,292 images / 289MB - use sample_images/ for deployment)
+ISL_DATA/
+
 # Temporary / Log files
 *.log
 *.tmp
