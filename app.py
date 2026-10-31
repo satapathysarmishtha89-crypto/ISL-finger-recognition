@@ -162,16 +162,19 @@ def load_all_models():
     """Loads MediaPipe Hand Landmarker, MobileNetV2 backbone, and trained weights."""
     # 1. MediaPipe Detector
     task_path = "hand_landmarker.task"
-    if not Path(task_path).exists():
-        detector = None
-    else:
-        base_options = python.BaseOptions(model_asset_path=task_path)
-        options = vision.HandLandmarkerOptions(
-            base_options=base_options,
-            num_hands=2,
-            min_hand_detection_confidence=0.4
-        )
-        detector = vision.HandLandmarker.create_from_options(options)
+    detector = None
+    if Path(task_path).exists():
+        try:
+            base_options = python.BaseOptions(model_asset_path=task_path)
+            options = vision.HandLandmarkerOptions(
+                base_options=base_options,
+                num_hands=2,
+                min_hand_detection_confidence=0.4
+            )
+            detector = vision.HandLandmarker.create_from_options(options)
+        except Exception as e:
+            # Fallback to pure vision CNN if system C-bindings fail
+            detector = None
 
     # 2. MobileNetV2 Feature Extractor Backbone
     backbone = models.mobilenet_v2(weights=models.MobileNet_V2_Weights.DEFAULT)
